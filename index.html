@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Funções em JavaScript</title>
+</head>
+<body>
+  <h2>Exercício de Funções em JavaScript</h2>
+  <script>
+
+    // --- Funções Nomeadas ---
+    function soma(a, b) {
+      return a + b;
+    }
+
+    function subtracao(a, b) {
+      return a - b;
+    }
+
+    function multiplicacao(a, b) {
+      return a * b;
+    }
+
+    function divisao(a, b) {
+      if (b === 0) {
+        return "Erro: divisão por zero!";
+      }
+      return a / b;
+    }
+
+    // --- Função que manipula arrays ---
+    // (usando uma função anônima)
+    const filtrarPares = function (numeros) {
+      return numeros.filter(num => num % 2 === 0);
+    };
+
+    // --- Função que calcula média usando arrow function ---
+    const calcularMedia = (numeros) => {
+      const soma = numeros.reduce((acc, n) => acc + n, 0);
+      return soma / numeros.length;
+    };
+
+    // --- Função com callback ---
+    function executarOperacao(a, b, operacao) {
+      return operacao(a, b);
+    }
+
+    
+    const numeros = [2, 5, 8, 10, 13];
+
+    console.log("Soma:", soma(5, 3));
+    console.log("Subtração:", subtracao(10, 4));
+    console.log("Multiplicação:", multiplicacao(6, 2));
+    console.log("Divisão:", divisao(10, 2));
+
+    console.log("Números pares:", filtrarPares(numeros));
+    console.log("Média dos números:", calcularMedia(numeros));
+
+    // Exemplo de callback:
+    console.log("Callback (usando multiplicação):", executarOperacao(4, 5, multiplicacao));
+    console.log("Callback (usando arrow function para soma):", executarOperacao(7, 3, (x, y) => x + y));
+  </script>
+</body>
+</html>
+
