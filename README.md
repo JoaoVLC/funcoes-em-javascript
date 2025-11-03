@@ -2,9 +2,6 @@ Título: Aplicação de Funções em JavaScript
 
 Aluno: João Vitor Lima Cecilio
 
-Descrição:
-O código desenvolvido realiza operações matemáticas básicas (soma, subtração, multiplicação e divisão) e também manipula dados em um array de números. O objetivo é demonstrar a criação, reutilização e combinação de funções, incluindo o uso de callbacks.
-
 Funções Criadas:
 1. Funções Nomeadas
    - soma(a, b), subtracao(a, b), multiplicacao(a, b), divisao(a, b)
